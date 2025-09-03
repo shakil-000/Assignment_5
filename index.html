@@ -25,12 +25,12 @@
         <div class="right-side flex gap-[10px] mr-[60px] mt-[25px] mb-[25px]">
             
             <div class="bg-[#c3e5ca] rounded-2xl flex items-center justify-center gap-2 w-[70px] h-[30px]">
-              <p id="favCount" class="font-bold text-sm">0</p> 
+              <p id="LoveCount" class="font-bold text-sm">0</p> 
               <img class="h-[20px] w-[20px]" src="assets/heart.png" alt=""> 
             </div>
 
             <div class="bg-[#c3e5ca] rounded-2xl flex items-center justify-center gap-2 w-[70px] h-[30px]">
-                <p class="font-bold text-sm">100</p>
+                <p class="font-bold text-sm" id="coinCount">100</p>
                 <img class="h-[20px] w-[20px]" src="assets/coin.png" alt="">
             </div>
 
@@ -53,13 +53,13 @@
             <img class="w-[40px] h-[40px] bg-[#FFE3E2] p-2 rounded-sm" src="assets/emergency.png" alt="">
             <img class="love-icon  w-[20px] h-[20px]" src="assets/loveScatch.png.png" alt="">
             </div>
-            <p class="font-bold mt-1">National Emergency Number</p>
-            <p class="text-[gray]">National Emergency</p>
-            <p class="font-bold mt-2 text-2xl">999</p>
+            <p class="card-title font-bold mt-1">National Emergency Number</p>
+            <p class="card-name text-[gray]">National Emergency</p>
+            <p class="card-number font-bold mt-2 text-2xl">999</p>
             <p class="bg-gray-200 w-8 rounded-[9px] flex justify-center">All</p>
             <div class="flex justify-between gap-1 mt-3">
             <button class="flex items-center justify-center gap-1 card-border-btn text-gray-500"><img class="w-[15px] h-[15px]" src="assets/copy.png.png" alt="">Copy</button>
-            <button class="flex items-center justify-center gap-1 text-gray-200 bg-[#2dac5c] w-[100px] rounded-[5px]"><img class="w-[15px] h-[15px]" src="assets/call.png.png" alt="">Call</button>   
+            <button class="call-btn flex items-center justify-center gap-1 text-gray-200 bg-[#2dac5c] w-[100px] rounded-[5px]"><img class="w-[15px] h-[15px]" src="assets/call.png.png" alt="">Call</button>   
             </div>
         </div>
         <div class="card bg-white w-[250px] rounded-sm p-3 border-1">
@@ -67,13 +67,13 @@
             <img class="w-[40px] h-[40px] bg-[#dcd9f7] p-2 rounded-sm" src="assets/police.png" alt="">
             <img class="love-icon  w-[20px] h-[20px]" src="assets/loveScatch.png.png" alt="">
             </div>
-            <p class="font-bold mt-1">Police Helpline Number</p>
-            <p class="text-[gray]">Police</p>
-            <p class="font-bold mt-2 text-2xl">999</p>
+            <p class="card-title font-bold mt-1">Police Helpline Number</p>
+            <p class="card-name text-[gray]">Police</p>
+            <p class="card-number font-bold mt-2 text-2xl">998</p>
             <p class="bg-gray-200 w-8 rounded-[9px] flex justify-center">Police</p>
             <div class="flex justify-between gap-1 mt-3">
             <button class="flex items-center justify-center gap-1 card-border-btn text-gray-500"><img class="w-[15px] h-[15px]" src="assets/copy.png.png" alt="">Copy</button>
-            <button class="flex items-center justify-center gap-1 text-gray-200 bg-[#2dac5c] w-[100px] rounded-[5px]"><img class="w-[15px] h-[15px]" src="assets/call.png.png" alt="">Call</button>   
+            <button class="call-btn flex items-center justify-center gap-1 text-gray-200 bg-[#2dac5c] w-[100px] rounded-[5px]"><img class="w-[15px] h-[15px]" src="assets/call.png.png" alt="">Call</button>   
             </div>
         </div>
         <div class="card bg-white w-[250px] rounded-sm p-3 border-1">
@@ -81,13 +81,13 @@
             <img class="w-[40px] h-[40px] bg-[#FFE3E2] p-2 rounded-sm" src="assets/fire-service.png" alt="">
             <img class="love-icon  w-[20px] h-[20px]" src="assets/loveScatch.png.png" alt="">
             </div>
-            <p class="font-bold mt-1">Fire Service Number</p>
-            <p class="text-[gray]">Fire Service</p>
-            <p class="font-bold mt-2 text-2xl">999</p>
+            <p class="card-title font-bold mt-1">Fire Service Number</p>
+            <p class="card-name text-[gray]">Fire Service</p>
+            <p class="card-number font-bold mt-2 text-2xl">979</p>
             <p class="bg-gray-200 w-8 rounded-[9px] flex justify-center">Fire</p>
             <div class="flex justify-between gap-1 mt-3">
             <button class="flex items-center justify-center gap-1 card-border-btn text-gray-500"><img class="w-[15px] h-[15px]" src="assets/copy.png.png" alt="">Copy</button>
-            <button class="flex items-center justify-center gap-1 text-gray-200 bg-[#2dac5c] w-[100px] rounded-[5px]"><img class="w-[15px] h-[15px]" src="assets/call.png.png" alt="">Call</button>   
+            <button class="call-btn flex items-center justify-center gap-1 text-gray-200 bg-[#2dac5c] w-[100px] rounded-[5px]"><img class="w-[15px] h-[15px]" src="assets/call.png.png" alt="">Call</button>   
             </div>
         </div>
         
@@ -100,9 +100,10 @@
           </div>
 
           <div>
-            <button class="text-white text-sm bg-[#2dac5c] rounded-2xl w-[70px] h-[30px] flex justify-center items-center">Clear</button>
+            <button id="clearHistory" class="text-white text-sm bg-[#2dac5c] rounded-2xl w-[70px] h-[30px] flex justify-center items-center">Clear</button>
           </div>
           </div>
+           <ul id="historyListing" class="p-3 space-y-2 text-sm text-gray-600"> </ul>
         </div>
         
         <div class="card bg-white w-[250px] rounded-sm p-3 border-1">
@@ -110,13 +111,13 @@
             <img class="w-[40px] h-[40px] bg-[#FFE3E2] p-2 rounded-sm" src="assets/ambulance.png" alt="">
             <img class="love-icon  w-[20px] h-[20px]" src="assets/loveScatch.png.png" alt="">
             </div>
-            <p class="font-bold mt-1">Ambulance Service</p>
-            <p class="text-[gray]">Ambulance</p>
-            <p class="font-bold mt-2 text-2xl">1994-999999</p>
+            <p class="card-title font-bold mt-1">Ambulance Service</p>
+            <p class="card-name text-[gray]">Ambulance</p>
+            <p class="card-number font-bold mt-2 text-2xl">1994-999999</p>
             <p class="bg-gray-200 w-8 rounded-[9px] flex justify-center">Health</p>
             <div class="flex justify-between gap-1 mt-3">
             <button class="flex items-center justify-center gap-1 card-border-btn text-gray-500"><img class="w-[15px] h-[15px]" src="assets/copy.png.png" alt="">Copy</button>
-            <button class="flex items-center justify-center gap-1 text-gray-200 bg-[#2dac5c] w-[100px] rounded-[5px]"><img class="w-[15px] h-[15px]" src="assets/call.png.png" alt="">Call</button>   
+            <button class="call-btn flex items-center justify-center gap-1 text-gray-200 bg-[#2dac5c] w-[100px] rounded-[5px]"><img class="w-[15px] h-[15px]" src="assets/call.png.png" alt="">Call</button>   
             </div>
         </div>
 
@@ -125,13 +126,13 @@
             <img class="w-[45px] h-[45px] bg-[#FFE3E2] p-1 rounded-sm" src="assets/women & child helpline.jpg" alt="">
             <img class="love-icon  w-[20px] h-[20px]" src="assets/loveScatch.png.png" alt="">
             </div>
-            <p class="font-bold mt-1">Women & Child Helpline</p>
-            <p class="text-[gray]">Women & Child Helpline</p>
-            <p class="font-bold mt-2 text-2xl">109</p>
+            <p class="card-title font-bold mt-1">Women & Child Helpline</p>
+            <p class="card-name text-[gray]">Women & Child </p>
+            <p class="card-number font-bold mt-2 text-2xl">109</p>
             <p class="bg-gray-200 w-8 rounded-[9px] flex justify-center">Help</p>
             <div class="flex justify-between gap-1 mt-3">
             <button class="flex items-center justify-center gap-1 card-border-btn text-gray-500"><img class="w-[15px] h-[15px]" src="assets/copy.png.png" alt="">Copy</button>
-            <button class="flex items-center justify-center gap-1 text-gray-200 bg-[#2dac5c] w-[100px] rounded-[5px]"><img class="w-[15px] h-[15px]" src="assets/call.png.png" alt="">Call</button>   
+            <button class="call-btn flex items-center justify-center gap-1 text-gray-200 bg-[#2dac5c] w-[100px] rounded-[5px]"><img class="w-[15px] h-[15px]" src="assets/call.png.png" alt="">Call</button>   
             </div>
         </div>
 
@@ -140,13 +141,13 @@
             <img class="w-[45px] h-[45px] bg-[#FFE3E2] p-1 rounded-sm" src="assets/anti corruption.jpg" alt="">
             <img class="love-icon  w-[20px] h-[20px]" src="assets/loveScatch.png.png" alt="">
             </div>
-            <p class="font-bold mt-1">Anti-Corruption Helpline</p>
-            <p class="text-[gray]">Anti-Corruption</p>
-            <p class="font-bold mt-2 text-2xl">106</p>
+            <p class="card-title font-bold mt-1">Anti-Corruption Helpline</p>
+            <p class="card-name text-[gray]">Anti-Corruption</p>
+            <p class="card-number font-bold mt-2 text-2xl">106</p>
             <p class="bg-gray-200 w-8 rounded-[9px] flex justify-center">Govt.</p>
             <div class="flex justify-between gap-1 mt-3">
             <button class="flex items-center justify-center gap-1 card-border-btn text-gray-500"><img class="w-[15px] h-[15px]" src="assets/copy.png.png" alt="">Copy</button>
-            <button class="flex items-center justify-center gap-1 text-gray-200 bg-[#2dac5c] w-[100px] rounded-[5px]"><img class="w-[15px] h-[15px]" src="assets/call.png.png" alt="">Call</button>   
+            <button class="call-btn flex items-center justify-center gap-1 text-gray-200 bg-[#2dac5c] w-[100px] rounded-[5px]"><img class="w-[15px] h-[15px]" src="assets/call.png.png" alt="">Call</button>   
             </div>
         </div>
 
@@ -155,13 +156,13 @@
             <img class="w-[45px] h-[45px] bg-[#FFE3E2] p-1 rounded-sm" src="assets/electricity.jpg" alt="">
             <img class="love-icon  w-[20px] h-[20px]" src="assets/loveScatch.png.png" alt="">
             </div>
-            <p class="font-bold mt-1">Electricity Helpline</p>
-            <p class="text-[gray]">Electricity Outage</p>
-            <p class="font-bold mt-2 text-2xl">16216</p>
+            <p class="card-title font-bold mt-1">Electricity Helpline</p>
+            <p class="card-name text-[gray]">Electricity Outage</p>
+            <p class="card-number font-bold mt-2 text-2xl">16216</p>
             <p class="bg-gray-200 w-8 rounded-[9px] flex justify-center">Electricity</p>
             <div class="flex justify-between gap-1 mt-3">
             <button class="flex items-center justify-center gap-1 card-border-btn text-gray-500"><img class="w-[15px] h-[15px]" src="assets/copy.png.png" alt="">Copy</button>
-            <button class="flex items-center justify-center gap-1 text-gray-200 bg-[#2dac5c] w-[100px] rounded-[5px]"><img class="w-[15px] h-[15px]" src="assets/call.png.png" alt="">Call</button>   
+            <button class="call-btn flex items-center justify-center gap-1 text-gray-200 bg-[#2dac5c] w-[100px] rounded-[5px]"><img class="w-[15px] h-[15px]" src="assets/call.png.png" alt="">Call</button>   
             </div>
         </div>
 
@@ -170,13 +171,13 @@
             <img class="w-[45px] h-[45px] bg-[#FFE3E2] p-1 rounded-sm" src="assets/brac.png" alt="">
             <img class="love-icon  w-[20px] h-[20px]" src="assets/loveScatch.png.png" alt="">
             </div>
-            <p class="font-bold mt-1"> Brac Helpline</p>
-            <p class="text-[gray]">Brac</p>
-            <p class="font-bold mt-2 text-2xl">16445</p>
+            <p class="card-title font-bold mt-1"> Brac Helpline</p>
+            <p class="card-name text-[gray]">Brac</p>
+            <p class="card-number font-bold mt-2 text-2xl">16445</p>
             <p class="bg-gray-200 w-8 rounded-[9px] flex justify-center">NGO</p>
             <div class="flex justify-between gap-1 mt-3">
             <button class="flex items-center justify-center gap-1 card-border-btn text-gray-500"><img class="w-[15px] h-[15px]" src="assets/copy.png.png" alt="">Copy</button>
-            <button class="flex items-center justify-center gap-1 text-gray-200 bg-[#2dac5c] w-[100px] rounded-[5px]"><img class="w-[15px] h-[15px]" src="assets/call.png.png" alt="">Call</button>   
+            <button class="call-btn flex items-center justify-center gap-1 text-gray-200 bg-[#2dac5c] w-[100px] rounded-[5px]"><img class="w-[15px] h-[15px]" src="assets/call.png.png" alt="">Call</button>   
             </div>
         </div>
 
@@ -185,13 +186,13 @@
             <img class="w-[45px] h-[45px] bg-[#FFE3E2] p-1 rounded-sm" src="assets/Bangladesh-Railway.png" alt="">
             <img class="love-icon  w-[20px] h-[20px]" src="assets/loveScatch.png.png" alt="">
             </div>
-            <p class="font-bold mt-1">Bangladesh Railway Helpline</p>
-            <p class="text-[gray]">Bangladesh Railway</p>
-            <p class="font-bold mt-2 text-2xl">163</p>
+            <p class="card-title font-bold mt-1">Bangladesh Railway Helpline</p>
+            <p class="card-name text-[gray]">Bangladesh Railway</p>
+            <p class="card-number font-bold mt-2 text-2xl">163</p>
             <p class="bg-gray-200 w-8 rounded-[9px] flex justify-center">Travel</p>
             <div class="flex justify-between gap-1 mt-3">
             <button class="flex items-center justify-center gap-1 card-border-btn text-gray-500"><img class="w-[15px] h-[15px]" src="assets/copy.png.png" alt="">Copy</button>
-            <button class="flex items-center justify-center gap-1 text-gray-200 bg-[#2dac5c] w-[100px] rounded-[5px]"><img class="w-[15px] h-[15px]" src="assets/call.png.png" alt="">Call</button>   
+            <button class="call-btn flex items-center justify-center gap-1 text-gray-200 bg-[#2dac5c] w-[100px] rounded-[5px]"><img class="w-[15px] h-[15px]" src="assets/call.png.png" alt="">Call</button>   
             </div>
         </div>
     </section>
