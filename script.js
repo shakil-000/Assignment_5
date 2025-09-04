@@ -32,7 +32,7 @@ for(const btn of callButtons){
             return;
         }
         else{
-            alert(`Calling ${serviceName} (${serviceNumber})`);
+            alert("Calling "+serviceName +" "+serviceNumber+" .....")
             NumberOfCoins.innerText = UpdatedCoins - 20; 
             
             //history related
@@ -66,9 +66,26 @@ document.getElementById('clearHistory')
 })
 
 
+//Copy Button Related
+const copyNumbers = document.getElementById('copy-number')
+const copyButtons = document.getElementsByClassName('copy-btn')
 
+for(const button of copyButtons){
+    button.addEventListener('click', function(){
 
+       const card = button.parentElement.parentElement;
+       const CopiedNumbers = card.getElementsByClassName('card-number')[0].innerText;
+       
+       alert("Copied "+ CopiedNumbers + " to clipboard!")
 
+       navigator.clipboard.writeText(CopiedNumbers);
+
+      let NumberCount = parseInt(copyNumbers.innerText)
+      NumberCount++;
+      copyNumbers.innerText = NumberCount;
+
+    })
+}
 
 
 
